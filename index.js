@@ -6,7 +6,7 @@ const getJoke = async () => {
         },
       });
       const json = await randomJoke.json();
-      document.getElementById("jokeText").innerHTML = json.joke;
+      document.getElementById("jokeText").innerHTML = `"${json.joke}"`;
     } catch (err) {
       console.log(err.message);
     }

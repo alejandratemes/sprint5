@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: url(pexels-helena-lopes-708440.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    border-radius: 1rem;
+    background-color: #fff;
+    align-self: center;
+    padding: 3em;
+    box-shadow: 10px 10px 10px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 5em;
+}
+
+#weatherText {
+    margin: 1.5em;
+    font-size: 1.2em;
+}
+
+#jokeText {
+    margin: 2.5em;
+    font-size: 1.2em;
+    width: 80%;
+}
+
+button {
+    margin-top: 1em;
+    padding: 1em 3em;
+    color: #fff;
+    background-color: #3ED3DE;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1em;
+}
