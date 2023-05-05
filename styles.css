@@ -6,13 +6,14 @@
 }
 
 body {
-    background: url(pexels-helena-lopes-708440.jpg);
+    background-image: url(pexels-helena-lopes-708440.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
 
-.container {
+main {
     border-radius: 1rem;
     background-color: #fff;
     align-self: center;
@@ -23,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin: 5em;
+    margin: 4em;
 }
 
 #weatherText {
@@ -38,11 +39,20 @@ body {
 }
 
 button {
-    margin-top: 1em;
-    padding: 1em 3em;
     color: #fff;
     background-color: #3ED3DE;
     border: none;
     border-radius: 1rem;
+}
+
+.rate {
+    padding: 0.4em;
+    margin: 0em 0.3em;
+    font-size: 1.7em;
+}
+
+#mainButton {
+    margin-top: 1em;
+    padding: 1em 3em;
     font-size: 1em;
 }
