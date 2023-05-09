@@ -1,6 +1,7 @@
 const showButtons = () => document.querySelectorAll("[rate]").forEach(element => element.style.display = "inline-block");
+
 let answer;
-const getJoke = async () => {
+const getDadJoke = async () => {
   const randomJoke = await fetch("https://icanhazdadjoke.com/", {
     headers: {
     Accept: "application/json",
@@ -10,7 +11,22 @@ const getJoke = async () => {
   document.getElementById("jokeText").innerHTML = `"${random.joke}"`;
   answer = random.joke;
   showButtons()
-};
+}
+
+const getNorrisJoke = async () => {
+  const randomJoke1 = await fetch("https://api.chucknorris.io/jokes/random");
+  const random1 = await randomJoke1.json();
+  const norrisJoke = random1.value
+  document.getElementById("jokeText").innerHTML = `"${norrisJoke}"`;
+  answer = random1.joke;
+  showButtons()
+}
+
+const getJoke = () => {
+  const num = parseInt(Math.random()*100)
+  if (num % 2) getDadJoke()
+  else getNorrisJoke()
+}
 
 let reportJokes = [];
 const addRating = score => {
