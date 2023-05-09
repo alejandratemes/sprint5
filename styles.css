@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
 
 header {
@@ -16,25 +17,59 @@ header {
 }
 
 body {
-    background-image: url(pexels-helena-lopes-708440.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.blob1, .blob2, .blob3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 900;
+}
+
+.blob1 {
+    background-image: url(/img/blob1.svg);
+    width: 80rem;
+    height: 100vh;
+    margin-top: 4em;
+    left: 15%;
+    background-size: 110%;
+}
+
+.blob2 {
+    background-image: url(/img/blob2.svg);
+    width: 25rem;
+    height: 100vh;
+    margin-top: 40%;
+    left: 1%;
+}
+
+.blob3 {
+    background-image: url(/img/blob3.svg);
+    width: 20rem;
+    height: 100vh;
+    left: 80%;
+}
+
+.jokeBox {
+    margin-top: 8em;
+    z-index: 950;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
 }
 
 main {
-    border-radius: 1rem;
-    background-color: #fff;
     align-self: center;
-    padding: 3em;
-    box-shadow: 10px 10px 10px gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 4em;
 }
 
 #jokeText {
@@ -44,20 +79,21 @@ main {
 }
 
 button {
-    color: #fff;
-    background-color: #3ED3DE;
     border: none;
     border-radius: 1rem;
 }
 
 .rate {
-    padding: 0.4em;
+    padding: 0%;
+    background-color: black;
     margin: 0em 0.3em;
     font-size: 1.7em;
 }
 
 #mainButton {
+    background-color: #EDC951;
     margin-top: 1em;
     padding: 1em 3em;
     font-size: 1em;
+    border: 0.2em solid black;
 }

@@ -9,20 +9,24 @@
 </head>
 <body>
     <header>
-        <p>Today's weather:</p>
+        <img id="weatherIcon"></img>
         <p id="weatherAPI"></p>
     </header>
     <main>
-        <h1>Ready to laugh?&#129315;</h1>
-        <p id="jokeText"></p>
-        <div class="ratings">
-            <button rate hidden class="rate" onclick=addRating(1)>&#128530;</button>
-            <button rate hidden class="rate" onclick=addRating(2)>&#128528;</button>
-            <button rate hidden class="rate" onclick=addRating(3)>&#128514;</button>
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="blob3"></div>
+        <div class="jokeBox">
+            <h1>Ready to laugh?&#129315;</h1>
+            <p id="jokeText"></p>
+            <div class="ratings">
+                <button rate hidden class="rate" onclick=addRating(1)>&#128530;</button>
+                <button rate hidden class="rate" onclick=addRating(2)>&#128528;</button>
+                <button rate hidden class="rate" onclick=addRating(3)>&#128514;</button>
+            </div>
+            <button onclick="getJoke()" id="mainButton">Next joke</button>
         </div>
-        <button onclick="getJoke()" id="mainButton">Next joke</button>
     </main>
-    </div>
     <script src="index.js"></script>
 </body>
 </html>
