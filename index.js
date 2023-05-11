@@ -8,17 +8,16 @@ const getDadJoke = async () => {
     },
   });
   const random = await randomJoke.json();
-  document.getElementById("jokeText").innerHTML = `"${random.joke}"`;
   answer = random.joke;
+  document.getElementById("jokeText").innerHTML = `"${random.joke}"`;
   showButtons()
 }
 
 const getNorrisJoke = async () => {
   const randomJoke1 = await fetch("https://api.chucknorris.io/jokes/random");
   const random1 = await randomJoke1.json();
-  const norrisJoke = random1.value
-  document.getElementById("jokeText").innerHTML = `"${norrisJoke}"`;
-  answer = random1.joke;
+  answer = random1.value
+  document.getElementById("jokeText").innerHTML = `"${answer}"`;
   showButtons()
 }
 
@@ -29,13 +28,17 @@ const getJoke = () => {
 }
 
 let reportJokes = [];
-const addRating = score => {
-  let report = {
+const addRating = (score) => {
+  let found = reportJokes.find(item => item.joke === answer)
+  if (found) {found.score = score}
+  else {  
+    let report = {
     joke: answer,
     score: score,
     date: new Date().toISOString()
   };
-  reportJokes.push(report);
+  reportJokes.push(report)
+  }
   console.log(reportJokes)
 }
 

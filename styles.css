@@ -32,32 +32,32 @@ body {
 
 .blob1 {
     background-image: url(/img/blob1.svg);
-    width: 80rem;
+    width: 75%;
     height: 100vh;
-    margin-top: 4em;
-    left: 15%;
+    margin-top: 2em;
+    left: 10%;
     background-size: 110%;
 }
 
 .blob2 {
     background-image: url(/img/blob2.svg);
-    width: 25rem;
+    width: 25%;
     height: 100vh;
-    margin-top: 40%;
-    left: 1%;
+    margin-top: 45%;
+    left: 0.5%;
 }
 
 .blob3 {
     background-image: url(/img/blob3.svg);
-    width: 20rem;
+    width: 20%;
     height: 100vh;
-    left: 80%;
+    left: 78%;
 }
 
 .jokeBox {
     margin-top: 8em;
     z-index: 950;
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +74,7 @@ main {
 
 #jokeText {
     margin: 2.5em;
-    font-size: 1.2em;
+    font-size: 1em;
     width: 80%;
 }
 
@@ -96,4 +96,27 @@ button {
     padding: 1em 3em;
     font-size: 1em;
     border: 0.2em solid black;
+}
+
+@media only screen and (max-width: 800px) {    
+    .jokeBox {
+        margin-top: 10em;
+        width: 60%;
+        font-size: 0.8em;
+    }
+    #jokeText {
+        margin: 2em;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {    
+    .jokeBox {
+        margin-top: 14em;
+        width: 60%;
+        font-size: 0.4em;
+    }
+    #jokeText {
+        width: 80%;
+    }
 }
